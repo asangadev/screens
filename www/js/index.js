@@ -44,6 +44,7 @@ var app = {
         UXCam.startWithKey("zcmaa9hru43z0np");
         UXCam.setAutomaticScreenNameTagging(false);
         UXCam.tagScreenName("HomeScreen");
+        UXCam.logEvent("purchaseXProduct", "yes");
     }
 };
 
