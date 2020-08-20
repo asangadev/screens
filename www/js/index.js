@@ -44,7 +44,9 @@ var app = {
         UXCam.startWithKey("zcmaa9hru43z0np");
         UXCam.setAutomaticScreenNameTagging(false);
         UXCam.tagScreenName("HomeScreen");
-        UXCam.logEvent("purchaseXProduct", "yes");
+        //UXCam.logEvent("purchaseXProduct", "yes");
+        //UXCam.logEventWithProperties("betaEvent", {"betaKey1": 0, "betaKey2": 1});
+        UXCam.logEventWithProperties("eventName", {"key": "value", "key2": 1});
     }
 };
 
