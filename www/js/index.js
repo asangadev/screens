@@ -39,14 +39,24 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        //UXCAM    
         UXCam.optIntoSchematicRecordings();
-        UXCam.startWithKey("zcmaa9hru43z0np");
+        UXCam.startWithKey("bcmaa0hru43z0nx");
         UXCam.setAutomaticScreenNameTagging(false);
         UXCam.tagScreenName("HomeScreen");
-        //UXCam.logEvent("purchaseXProduct", "yes");
-        //UXCam.logEventWithProperties("betaEvent", {"betaKey1": 0, "betaKey2": 1});
-        UXCam.logEventWithProperties("eventName", {"key": "value", "key2": 1});
+        
+        document.getElementById("stage2").classList.add('hide');
+        
+        setTimeout(function(){
+            document.getElementById("stage2").classList.remove('hide');
+            document.getElementById("stage2").classList.add('show');
+            UXCam.tagScreenName("HomeScreenStage2");
+            UXCam.logEventWithProperties("eventName", {"key": "value", "key2": 1});
+            UXCam.logEvent("button1 tapped");
+            UXCam.logEventWithProperties("buy", {product_type: "t-shirt", size:"XL"});
+        }, 4000);
+        //UXCAM
+        
     }
 };
 
